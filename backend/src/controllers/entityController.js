@@ -1,8 +1,8 @@
 import * as model from "../models/entityModel.js";
 
 export async function getAll(req, res) {
-    const entities = await model.getAllEntities();
-    res.json(entities);
+    const data = await model.getAllEntities();
+    res.json(data);
 }
 
 export async function getOne(req, res) {
@@ -21,7 +21,6 @@ export async function create(req, res) {
 export async function update(req, res) {
     const { name, description } = req.body;
     const updated = await model.updateEntity(req.params.id, name, description);
-    if (!updated) return res.status(404).json({ error: "Not found" });
     res.json(updated);
 }
 

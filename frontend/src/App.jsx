@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./App.module.css";
 import EntityForm from "./components/EntityForm";
 import EntityList from "./components/EntityList";
 
@@ -16,8 +17,8 @@ function App() {
     }, []);
 
     return (
-        <div className="App">
-            <h1>CRUD Entities</h1>
+        <div className={styles.container}>
+            <h1 className={styles.title}>CRUD Project</h1>
             <EntityForm onSaved={fetchEntities} />
             <EntityList entities={entities} onChange={fetchEntities} />
         </div>

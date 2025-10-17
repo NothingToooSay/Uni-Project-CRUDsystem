@@ -1,13 +1,26 @@
-import pg from "pg";
-import dotenv from "dotenv";
-dotenv.config();
+import sqlite3 from "sqlite3";
+import { open } from "sqlite";
 
-const pool = new pg.Pool({
-    user: process.env.PG_USER,
-    password: process.env.PG_PASSWORD,
-    host: process.env.PG_HOST,
-    port: process.env.PG_PORT,
-    database: process.env.PG_DATABASE,
-});
+let db;
 
-export default pool;
+export async function initDB() {
+    db = await open({
+        filename: "./database.sqlite",
+        driver: sqlite3.Database,
+    });
+
+    await db.exec(`
+    CREATE TABLE IF NOT EXISTS entities (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT NOT NULL,
+      description TEXT
+    )
+  `);
+
+    console.log("✅ SQLite database ready");
+}
+
+export function getDB() {
+    if (!db) throw new Error("Database not initialized");
+    return db;
+}

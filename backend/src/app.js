@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import { initDB } from "./db.js";
 import entityRoutes from "./routes/entityRoutes.js";
 
 const app = express();
@@ -8,6 +9,7 @@ app.use(express.json());
 
 app.use("/entities", entityRoutes);
 
-app.listen(process.env.PORT || 5000, () => {
-    console.log("Server running on port 5000");
+const PORT = 5000;
+initDB().then(() => {
+    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 });

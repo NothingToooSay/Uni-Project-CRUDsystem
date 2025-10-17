@@ -1,0 +1,17 @@
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #121212;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    color: #eee;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.title {
+    text-align: center;
+    color: #b388ff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./EntityForm.module.css";
 
 export default function EntityForm({ onSaved }) {
     const [name, setName] = useState("");
@@ -6,6 +7,7 @@ export default function EntityForm({ onSaved }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!name.trim()) return;
         await fetch("http://localhost:5000/entities", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -17,18 +19,24 @@ export default function EntityForm({ onSaved }) {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className={styles.form} onSubmit={handleSubmit}>
             <input
+                type="text"
                 placeholder="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                className={styles.input}
             />
             <input
+                type="text"
                 placeholder="Description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
+                className={styles.input}
             />
-            <button type="submit">Add</button>
+            <button type="submit" className={styles.button}>
+                Add
+            </button>
         </form>
     );
 }

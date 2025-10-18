@@ -71,3 +71,34 @@ my-crud-project/
 5. Simple structure for easy teamwork and deployment
 
 ---
+
+# 2️⃣ Second part
+
+## 📝 Database
+1. Dodano 2 nowe pola do bazy danych (surname, email)
+
+## 💻 Frontend
+1. Dodano kolumny, aby wyświetlić nowe dane w tabeli w pliku `EntityList.jsx`
+2. Dodano 2 nowe pola do wprowadzania danych do formularza w pliku `EntityForm.jsx`
+3. Dodano możliwość edycji i poprawnego usuwania wierszy z nowymi danymi
+
+## 🧩 Backend
+1. Zaktualizowano tworzenie bazy danych z nowymi polami, jeśli baza danych nie została jeszcze utworzona w pliku `db.js`
+2. Zaktualizowano operacje na danych (usuwanie, dodawanie, edycja itp.) w plikach `entityModel.js` i `entityController.js`
+
+
+## 👁️ Widok przed i po
+<table>
+  <tr>
+    <td align="center">
+      <h1>🕒 Przed</h1><br>
+      <img src="https://github.com/user-attachments/assets/7e6927b7-6fea-4bd6-b697-f985ef0ce2cf" width="400" alt="Przed"/>
+    </td>
+    <td align="center">
+      <h1>🆕 Po</h1><br>
+      <img src="https://github.com/user-attachments/assets/bdea1c56-526d-4d3a-b966-cbad8ad4d488" width="400" alt="Po"/>
+    </td>
+  </tr>
+</table>
+
+

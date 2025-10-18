@@ -1,0 +1,98 @@
+.list {
+    list-style: none;
+    padding: 0;
+    color: #f0f0f0;
+}
+
+.item {
+    background: #1e1e2f;
+    border: 1px solid #2c2c3c;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: background 0.3s ease;
+}
+
+.item:hover {
+    background: #2a2a3d;
+}
+
+.name {
+    font-size: 18px;
+    color: #c9a7ff;
+}
+
+.description {
+    margin: 5px 0 0 0;
+    color: #ccc;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.editBtn,
+.deleteBtn,
+.saveBtn,
+.cancelBtn {
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.editBtn {
+    background: #7e57c2;
+    color: white;
+}
+
+.editBtn:hover {
+    background: #9575cd;
+}
+
+.deleteBtn {
+    background: #e53935;
+    color: white;
+}
+
+.deleteBtn:hover {
+    background: #f4511e;
+}
+
+.saveBtn {
+    background: #43a047;
+    color: white;
+}
+
+.saveBtn:hover {
+    background: #66bb6a;
+}
+
+.cancelBtn {
+    background: #616161;
+    color: white;
+}
+
+.cancelBtn:hover {
+    background: #757575;
+}
+
+.input {
+    background: #2a2a3d;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #eee;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    width: 100%;
+}
+
+.editForm {
+    width: 100%;
+}

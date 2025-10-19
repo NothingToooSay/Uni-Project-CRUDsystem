@@ -14,21 +14,6 @@ It uses **Node.js**, **Express.js**, **React**, and **SQLite** as the database.
 
 ---
 
-🏗️ Project Structure
-
-my-crud-project/
-├── backend/         # Node.js + Express API (SQLite)
-│   ├── src/
-│   ├── database.sqlite
-│   └── package.json
-├── frontend/        # React client app
-│   ├── src/
-│   ├── public/
-│   └── package.json
-└── README.md
-
----
-
 ## 🚀 How to Run the Project
 
 ### 🧩 Backend Setup
